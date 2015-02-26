@@ -77,7 +77,5 @@ http {
         <% Shellwords.split(ENV['NGINX_INCLUDES'].to_s).each do |f| %>
         include /app/<%= f %>;
         <% end %>
-        
-        return         301 https://$server_name$request_uri;
     }
 }
